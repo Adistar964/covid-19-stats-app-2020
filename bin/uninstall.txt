@@ -1,0 +1,1 @@
+to uninstall this app, you have to delete the folder in which it lies in.
