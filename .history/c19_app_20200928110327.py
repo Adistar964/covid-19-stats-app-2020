@@ -10,10 +10,10 @@ r = Tk()
 
 r.grab_set()
 
-r.geometry('700x300')
+r.geometry('800x800')
 
 r.title('Covid-19 Informer')
-r.iconbitmap('pics//c19.ico')
+r.iconbitmap('pics/c19.ico')
 
 cnts = []
 
@@ -38,11 +38,11 @@ if connected:
 
 	def	create_another(tc, td, tr):
 		top = Toplevel()
-		top.iconbitmap('pics//c19.ico')
+		top.iconbitmap('pics/c19.ico')
 		top.title('Covid-19 Informer')
 		top.geometry('900x220')
 		top.config(bg='black')
-		l = Label(top, fg='white',bg='black',font=('Helvetica', 22),text=f'These are the total stats of covid-19 from all over the world!\n\n\nTotal cases: {tc}\nTotal deaths: {td}\nTotal recoveries: {tr}\n')
+		l = Label(top, fg='white',bg='black',font=('Helvetica', 22),text=f'These are the total stats of the coronavirus from all over the world!\n\n\nTotal cases: {tc},\nTotal deaths: {td},\nTotal recoveries: {tr}\n')
 		l.grid(row=0,column=0)
 
 	def totalCases():
@@ -50,27 +50,27 @@ if connected:
 		totaldata = sp.find_all('div', id='maincounter-wrap')
 		for i in totaldata:
 			if i.h1.text == 'Coronavirus Cases:':
-				total_cases = i.div.span.text.strip()
+				total_cases = i.div.span.text
 			if i.h1.text == 'Deaths:':
-				total_deaths = i.div.span.text.strip()
+				total_deaths = i.div.span.text
 			if i.h1.text == 'Recovered:':
-				total_recovered = i.div.span.text.strip()
+				total_recovered = i.div.span.text
 
 		create_another(total_cases, total_deaths, total_recovered)
 
 	def about():
 		top = Toplevel()
-		top.iconbitmap('pics//c19.ico')
+		top.iconbitmap('pics/c19.ico')
 		top.title('Covid-19 Informer')
 		top.geometry('535x500')
 		top.config(bg='black')
 		Label(top, fg='white',font=('Helvetica', 22), bg='black',text='Product Details\n\n').grid(row=0,column=0, padx=20, pady=20)
-		Label(top, fg='white',font=('Helvetica', 22), bg='black',text='App-name : Covid-19 Stats-giver\nApp-license under : Adistar-964\nApp-creator : Abdullah\nApp created at : 24 Sep 2020\ndata taken from : www.worldometers.info').grid(row=1, column=0)
+		Label(top, fg='white',font=('Helvetica', 22), bg='black',text='App-name : Covid-19 Stats-giver\nApp-license under : Adistar-964\nApp-creator : Ali\nApp created at : 24 Sep 2020\ndata taken from : www.worldometers.info').grid(row=1, column=0)
 
 	def cntav():
 		global cnts
 		top = Toplevel(bg='black')
-		top.iconbitmap('pics//c19.ico')
+		top.iconbitmap('pics/c19.ico')
 		top.title('Covid-19 Informer')
 		top.geometry('500x500')
 		top.resizable(False, False)
@@ -96,7 +96,7 @@ if connected:
 
 	def helpp():
 		top = Toplevel()
-		top.iconbitmap('pics//c19.ico')
+		top.iconbitmap('pics/c19.ico')
 		top.title('Covid-19 Informer')
 		top.geometry('920x500')
 		Label(top, font=('Helvetica', 20),text="This will only tell you about what to do if your in need of serious help!\n\n\n").pack()
@@ -146,11 +146,11 @@ if connected:
 		for i in total:
 			if i.h1 != None:
 				if i.h1.text == 'Deaths:':
-					deaths = i.div.span.text.strip()
+					deaths = i.div.span.text
 				if i.h1.text == 'Coronavirus Cases:':
-					cases = i.div.span.text.strip()
+					cases = i.div.span.text
 				if i.h1.text == 'Recovered:':
-					recovered = i.div.span.text.strip()
+					recovered = i.div.span.text
 		text = StringVar()
 		stats = Label(r, width=60,
 					  font=('Roboto', 16))

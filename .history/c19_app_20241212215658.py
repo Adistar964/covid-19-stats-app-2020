@@ -65,7 +65,7 @@ if connected:
 		top.geometry('535x500')
 		top.config(bg='black')
 		Label(top, fg='white',font=('Helvetica', 22), bg='black',text='Product Details\n\n').grid(row=0,column=0, padx=20, pady=20)
-		Label(top, fg='white',font=('Helvetica', 22), bg='black',text='App-name : Covid-19 Stats-giver\nApp-license under : Adistar-964\nApp-creator : Abdullah\nApp created at : 24 Sep 2020\ndata taken from : www.worldometers.info').grid(row=1, column=0)
+		Label(top, fg='white',font=('Helvetica', 22), bg='black',text='App-name : Covid-19 Stats-giver\nApp-license under : Adistar-964\nApp-creator : Ali\nApp created at : 24 Sep 2020\ndata taken from : www.worldometers.info').grid(row=1, column=0)
 
 	def cntav():
 		global cnts
