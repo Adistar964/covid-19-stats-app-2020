@@ -55,12 +55,6 @@ pip install requests beautifulsoup4 tk html5lib tkhtmlview lxml
 - **No Internet Connection:** If no internet connection is found, the app will alert the user and automatically close the window.
 - **Incorrect Country Name:** If a country name is entered incorrectly, the app will notify the user.
 
-## File Details
-
-- **c19_app.py**: The main application file where the GUI and web scraping functionalities reside.
-- **/pics** (picture files for apps, like icons)
-- **bin directory**: contains files like help.txt and uninstall.txt to help with certain things.
-
 ### Debugging "Incorrect country name entered!":
 
 If you are unable to find stats for some countries, check the "countries available" option under the information menu to get detailed info about the countries you could input. If the app doesn't work due to not having internet connection, make sure your device is connected to the internet.
